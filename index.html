@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claim Your Reward</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0a0f;
+    --card: #13131a;
+    --border: #1e1e2e;
+    --accent1: #f59e0b;
+    --accent2: #6366f1;
+    --text: #e2e8f0;
+    --muted: #64748b;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    overflow-x: hidden;
+  }
+
+  /* ambient glow */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -200px; left: 50%;
+    transform: translateX(-50%);
+    width: 700px; height: 500px;
+    background: radial-gradient(ellipse, rgba(99,102,241,.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent1);
+    border: 1px solid rgba(245,158,11,.25);
+    padding: 4px 14px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    text-align: center;
+    max-width: 560px;
+    margin-bottom: 14px;
+  }
+
+  h1 span {
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .sub {
+    color: var(--muted);
+    text-align: center;
+    font-size: .95rem;
+    max-width: 420px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 580px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: border-color .25s, transform .25s;
+  }
+
+  .card:hover { border-color: var(--accent2); transform: translateY(-3px); }
+
+  .card-icon {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+  }
+
+  .card:nth-child(1) .card-icon { background: rgba(245,158,11,.12); }
+  .card:nth-child(2) .card-icon { background: rgba(99,102,241,.12); }
+
+  .card-title {
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .card-desc {
+    font-size: .82rem;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .btn {
+    display: inline-block;
+    width: 100%;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: .9rem;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 4px;
+    transition: opacity .2s, transform .15s;
+    cursor: pointer;
+  }
+
+  .btn:hover { opacity: .88; transform: scale(.98); }
+
+  .btn-gold {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #0a0a0f;
+  }
+
+  .btn-indigo {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: #fff;
+  }
+
+  .footer {
+    margin-top: 48px;
+    font-size: .75rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<span class="badge">⚡ Limited Access</span>
+
+<h1>Choose Your <span>Exclusive</span> Offer</h1>
+<p class="sub">Select one of the options below to unlock your special reward. Available for a limited time only.</p>
+
+<div class="cards">
+
+  <div class="card">
+    <div class="card-icon">🎁</div>
+    <div class="card-title">Option 1 — Special Deal</div>
+    <div class="card-desc">Unlock premium access instantly. No hidden fees, activate now.</div>
+    <a class="btn btn-gold" href="https://omg10.com/4/11150397" target="_blank" rel="noopener">
+      Claim Now →
+    </a>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">🚀</div>
+    <div class="card-title">Option 2 — Bonus Offer</div>
+    <div class="card-desc">Get your exclusive bonus and enjoy instant access to top content.</div>
+    <a class="btn btn-indigo" href="https://omg10.com/4/11150395" target="_blank" rel="noopener">
+      Get Bonus →
+    </a>
+  </div>
+
+</div>
+
+<div class="footer">© 2026 · All rights reserved · By continuing you agree to our terms.</div>
+
+</body>
+</html>
